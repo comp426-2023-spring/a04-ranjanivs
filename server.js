@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 //check endpoint at /app/ that returns 200 ok
-app.get('/app', (req, res)) => {
+app.get('/app/', (req, res) => {
     res.status(200).send("200 OK");
-}
+})
 
