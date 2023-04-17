@@ -52,3 +52,13 @@ app.post('/app/rpsls/play/', (req, res) => {
     res.status(200).send(JSON.stringify(rpsls(req.body.shot)));
 });
 
+//404 code
+app.get('*', (req, res) => {
+    res.status(404).send('404 NOT FOUND');
+});
+
+//listen
+app.listen(port, () => {
+    console.log('Server is up on port ' + port);
+  });
+
