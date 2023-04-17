@@ -13,5 +13,18 @@ app.use(express.urlencoded({ extended: true }));
 //check endpoint at /app/ that returns 200 ok
 app.get('/app/', (req, res) => {
     res.status(200).send("200 OK");
-})
+});
+
+//check endpoint at /app/rps/
+app.get('/app/rps/', (req,res) => {
+    res.status(200).send(JSON.stringify(rps()));
+});
+
+//check endpoint at /app/rpsls/
+app.get('app/rpsls', (req, res) => {
+    res.status(200).send(JSON.stringify(rpsls()));
+});
+
+
+
 
